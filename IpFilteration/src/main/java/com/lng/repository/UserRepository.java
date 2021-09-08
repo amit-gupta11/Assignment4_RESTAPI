@@ -8,11 +8,11 @@ import org.springframework.stereotype.Repository;
 import com.lng.entity.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<User,Long>
+{
 
-    @Query("select u.isAdmin from User u where LOWER(userId)=LOWER(:id)")
-    public boolean IsAdmin(@Param("id") String id);
-
-    public User findUserByUserId(String userId);
-
+	@Query("select u.isAdmin from User u where LOWER(userId)=LOWER(:id)")
+	public boolean IsAdmin(@Param("id") String id);
+	public User findUserByUserId(String userId);
+	
 }

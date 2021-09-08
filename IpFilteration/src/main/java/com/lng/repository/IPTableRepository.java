@@ -7,9 +7,8 @@ import org.springframework.stereotype.Repository;
 import com.lng.entity.IPTable;
 
 @Repository
-public interface IPTableRepository extends JpaRepository<IPTable, Long> {
+public interface IPTableRepository extends JpaRepository<IPTable,Long> {
 
-    public List<IPTable> findAllByAddedby(String userId);
-
-    public IPTable findByIp(String ip);
+	public List<IPTable> findAllByAddedby(String userId);
+	public IPTable findByIp(String ip);
 }
